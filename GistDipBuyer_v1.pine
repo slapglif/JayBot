@@ -1,0 +1,87 @@
+//@version=6
+strategy("Gist Dip Buyer v1 — 15m Single-Symbol", overlay=true, initial_capital=100000, pyramiding=4, process_orders_on_close=true, default_qty_type=strategy.fixed, default_qty_value=1)
+
+// This strategy faithfully models the per-symbol rules from the supplied spec.
+// TradingView strategies can place orders only on the chart symbol, so cross-symbol
+// ranking, a shared ten-stock portfolio, and portfolio-wide pause state must be
+// handled externally or by running one instance per approved chart symbol.
+
+string TZ = "America/New_York"
+bool symbolApproved = input.bool(true, "Chart symbol is on approved watchlist", group="Eligibility")
+string regularSession = input.session("0930-1600", "Regular session (ET)", group="Eligibility")
+int evalHour = input.int(13, "Evaluation hour ET", minval=0, maxval=23, group="Eligibility")
+int evalMinute = input.int(0, "Evaluation minute ET", minval=0, maxval=59, group="Eligibility")
+int maLength = input.int(200, "15-minute MA length", minval=1, group="Eligibility")
+bool require15m = input.bool(true, "Block entries unless chart is 15 minutes", group="Eligibility")
+
+float entryPct = input.float(1.25, "Equity % per entry", minval=0.01, maxval=100, step=0.05, group="Risk")
+int maxEntries = input.int(4, "Maximum entries", minval=1, maxval=4, group="Risk")
+float maxAllocationPct = input.float(5.0, "Maximum planned allocation %", minval=0.01, maxval=100, step=0.25, group="Risk")
+int waitTradingDays = input.int(2, "Trading days between entries", minval=0, group="Risk")
+float profitTargetPct = input.float(5.0, "Profit target %", minval=0.01, step=0.25, group="Risk")
+
+bool is15m = timeframe.isminutes and timeframe.multiplier == 15
+bool timeframeOK = not require15m or is15m
+bool inRegularSession = not na(time(timeframe.period, regularSession, TZ))
+bool firstSessionBar = inRegularSession and not inRegularSession[1]
+
+var float dayOpen = na
+var int tradingDayCounter = 0
+if firstSessionBar
+    dayOpen := open
+    tradingDayCounter += 1
+
+int dayKey = year(time, TZ) * 10000 + month(time, TZ) * 100 + dayofmonth(time, TZ)
+bool evaluationBar = inRegularSession and hour(time, TZ) == evalHour and minute(time, TZ) == evalMinute
+float ma200 = ta.sma(close, maLength)
+bool priceEligible = not na(dayOpen) and close < ma200 and close < dayOpen
+
+var int entryCount = 0
+var int lastEntryTradingDay = na
+var int lastEntryDayKey = na
+bool flat = strategy.position_size == 0
+if flat and strategy.position_size[1] != 0
+    entryCount := 0
+    lastEntryTradingDay := na
+    lastEntryDayKey := na
+
+bool waitedLongEnough = na(lastEntryTradingDay) or tradingDayCounter - lastEntryTradingDay >= waitTradingDays
+bool entryCapOK = entryCount < maxEntries
+bool allocationCapOK = (entryCount + 1) * entryPct <= maxAllocationPct + 1e-9
+bool entrySignal = barstate.isconfirmed and evaluationBar and symbolApproved and timeframeOK and priceEligible and waitedLongEnough and entryCapOK and allocationCapOK
+
+if entrySignal
+    float orderValue = strategy.equity * entryPct / 100.0
+    float orderQty = orderValue / close
+    if orderQty > 0
+        strategy.entry("Long", strategy.long, qty=orderQty, comment=entryCount == 0 ? "Initial" : "Add")
+        entryCount += 1
+        lastEntryTradingDay := tradingDayCounter
+        lastEntryDayKey := dayKey
+
+float targetPrice = strategy.position_size > 0 ? strategy.position_avg_price * (1.0 + profitTargetPct / 100.0) : na
+if strategy.position_size > 0
+    strategy.exit("Profit Target", from_entry="Long", limit=targetPrice, comment="Average position target")
+
+plot(ma200, "15m SMA", color=color.orange, linewidth=2)
+plot(dayOpen, "Regular-session open", color=color.new(color.blue, 20), style=plot.style_stepline)
+plot(targetPrice, "Profit target", color=color.green, style=plot.style_linebr)
+plotshape(entrySignal, title="Eligible entry", style=shape.triangleup, location=location.belowbar, color=color.lime, size=size.tiny, text="BUY")
+bgcolor(require15m and not is15m ? color.new(color.red, 88) : na, title="Wrong timeframe warning")
+
+var table status = table.new(position.top_right, 2, 6, border_width=1)
+if barstate.islast
+    table.cell(status, 0, 0, "Mode")
+    table.cell(status, 1, 0, timeframeOK ? "Ready" : "Use 15m")
+    table.cell(status, 0, 1, "Approved")
+    table.cell(status, 1, 1, str.tostring(symbolApproved))
+    table.cell(status, 0, 2, "Entries")
+    table.cell(status, 1, 2, str.tostring(entryCount) + "/" + str.tostring(maxEntries))
+    table.cell(status, 0, 3, "Day open")
+    table.cell(status, 1, 3, str.tostring(dayOpen, format.mintick))
+    table.cell(status, 0, 4, "SMA")
+    table.cell(status, 1, 4, str.tostring(ma200, format.mintick))
+    table.cell(status, 0, 5, "Target")
+    table.cell(status, 1, 5, str.tostring(targetPrice, format.mintick))
+
+alertcondition(entrySignal, "Eligible 1 PM dip entry", "{{ticker}} meets the 1 PM ET dip-entry rules")

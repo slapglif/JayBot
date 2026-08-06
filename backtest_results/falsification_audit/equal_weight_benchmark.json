@@ -1,0 +1,14 @@
+{
+  "unseen_recent": {
+    "ending_equity": 268812.03058628767,
+    "return_pct": 168.81203058628768,
+    "cagr_pct": 39.15849815603782,
+    "max_drawdown_pct": -40.24153845736915
+  },
+  "unseen_predevelopment": {
+    "ending_equity": 1702460.8939970296,
+    "return_pct": 1602.4608939970296,
+    "cagr_pct": 23.249041592517727,
+    "max_drawdown_pct": -57.814919651616734
+  }
+}

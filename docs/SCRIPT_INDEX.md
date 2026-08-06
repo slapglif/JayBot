@@ -34,6 +34,14 @@
 - `test_leveraged_etf_options_3y.py` — last-three-year comparison of raw and balanced crash-grid winners on ten 2× ETFs.
 - `calculate_option_drawdown_and_orders.py` — shared-$100k mark-to-model equity curve, maximum drawdown, and 1,008-row buy/sell ledger.
 
+## Falsification audit
+
+- `falsification_audit.py` — frozen-parameter unseen-era/universe tests, weekday perturbations, execution/IV stresses, annual diagnostics, and nearby-parameter surface.
+- `docs/FALSIFICATION_AUDIT.md` — executed evidence, 33/100 market-readiness score, every deduction, and remediation gates.
+- `docs/GENERALIZATION_AUDIT.md` — independent statistical audit, leave-one-regime-out failures, and prospective protocol.
+- `backtest_results/falsification_audit/` — complete machine-readable tests, manifests, ledgers, score, bootstrap diagnostics, benchmarks, and shared-cash diagnostics.
+- `screenshots/30_falsification_audit.png` — white-font audit dashboard.
+
 ## Key artifacts
 
 - `backtest_results/leveraged_etf_options_3y/summary.csv`

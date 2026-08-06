@@ -1,0 +1,21 @@
+{
+  "continuous_unseen_years": 14,
+  "positive_years": 9,
+  "negative_years": 5,
+  "median_annual_profit": 28071.151356653747,
+  "mean_annual_profit": 30026.774513763667,
+  "bootstrap_mean_95pct_ci": [
+    -11205.410407688492,
+    72370.93928921383
+  ],
+  "bootstrap_probability_mean_positive": 0.92146,
+  "best_year_profit": 187527.58987486278,
+  "worst_year_profit": -101797.92247548557,
+  "top_year_share_of_total_pct": 44.60961280428094,
+  "unseen_recent_top_symbol": "USD",
+  "unseen_recent_top_symbol_share_pct": 39.7149396359264,
+  "unseen_recent_negative_symbols": [
+    "DDM",
+    "MVV"
+  ]
+}

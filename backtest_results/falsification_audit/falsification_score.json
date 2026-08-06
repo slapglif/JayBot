@@ -1,0 +1,34 @@
+{
+  "score_name": "JayBot falsification readiness",
+  "score": 33,
+  "maximum": 100,
+  "meaning_of_100": "Ready to deploy with real capital today under predeclared risk limits",
+  "verdict": "Promising synthetic research signal; not market-ready and not proven unbiased",
+  "categories": [
+    {"category":"Unseen/OOS validation","maximum":15,"awarded":9,"deducted":6,"evidence":"Frozen rule positive on unseen 2x ETF universe in 2010-2023 and 2023-2026, but all historical periods are now inspected and options remain synthetic."},
+    {"category":"Parameter multiplicity control","maximum":12,"awarded":5,"deducted":7,"evidence":"All 27 nearby cells positive and frozen cell ranks 13th, but winner followed 300 crash cells plus earlier searches without PBO/deflated-statistic correction."},
+    {"category":"Universe selection robustness","maximum":10,"awarded":4,"deducted":6,"evidence":"Unseen broad 2x universe was positive, but no point-in-time census includes closures/delistings and current universe is hand selected."},
+    {"category":"Historical option-chain validation","maximum":15,"awarded":0,"deducted":15,"evidence":"No point-in-time contracts, NBBO, trades, IV surfaces, skew, or listing availability."},
+    {"category":"Execution realism","maximum":10,"awarded":2,"deducted":8,"evidence":"Close-only targets remain positive, but exact synthetic 6x fills dominate; 109 targets contribute 136.7% of net profit."},
+    {"category":"Costs and slippage","maximum":8,"awarded":4,"deducted":4,"evidence":"5% entry/exit spread plus commission remains positive, but combined adverse assumptions lose money and no observed spreads were used."},
+    {"category":"Walk-forward validation","maximum":8,"awarded":2,"deducted":6,"evidence":"Annual diagnostics exist, but no pristine nested walk-forward; all three leave-one-crash-regime selections lose on held-out regime."},
+    {"category":"Robustness/stress","maximum":10,"awarded":5,"deducted":5,"evidence":"All five entry days and 27 parameter neighbors positive; +25% entry-IV markup and combined adverse scenarios are negative."},
+    {"category":"Concentration/portfolio risk","maximum":6,"awarded":2,"deducted":4,"evidence":"Cash remains positive, but unseen runs reach 99-117 positions and top recent unseen symbol supplies 39.7% of profit."},
+    {"category":"Operational/live readiness","maximum":6,"awarded":0,"deducted":6,"evidence":"No broker contract mapper, quote validation, paper shadow record, monitoring, or live risk kill switches."}
+  ],
+  "headline_tests": {
+    "unseen_recent_profit": 148170.97881316184,
+    "unseen_recent_profit_on_premium_pct": 46.51476256001051,
+    "unseen_predevelopment_profit": 420374.84319269133,
+    "unseen_predevelopment_profit_on_premium_pct": 24.280934637401415,
+    "entry_days_positive": "5/5",
+    "nearby_parameters_positive": "27/27",
+    "frozen_parameter_rank": "13/27",
+    "continuous_unseen_positive_years": "9/14",
+    "bootstrap_mean_95pct_ci": [-11205.410407688492,72370.93928921383],
+    "iv_markup_25pct_profit": -4065.333469,
+    "combined_adverse_profit": -10728.046251,
+    "leave_one_crash_regime_out": "0/3 profitable",
+    "real_historical_option_trades": 0
+  }
+}

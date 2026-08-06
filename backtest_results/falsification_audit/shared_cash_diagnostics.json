@@ -1,0 +1,14 @@
+{
+  "unseen_recent": {
+    "ending_cash": 248170.97881316175,
+    "minimum_cash": 62866.942413618344,
+    "max_open_positions": 99,
+    "cash_feasible": true
+  },
+  "unseen_predevelopment": {
+    "ending_cash": 520374.8431926904,
+    "minimum_cash": 44812.33138784851,
+    "max_open_positions": 117,
+    "cash_feasible": true
+  }
+}

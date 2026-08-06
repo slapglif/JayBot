@@ -1,0 +1,14 @@
+{
+  "starting_equity": 100000,
+  "ending_equity": 271548.3515116556,
+  "max_drawdown_pct": -17.637321711985354,
+  "max_drawdown_dollars": -19286.516352249702,
+  "peak_date": "2023-12-19",
+  "trough_date": "2024-01-04",
+  "peak_equity": 109350.5956697702,
+  "trough_equity": 90064.0793175205,
+  "minimum_cash": 77925.66404852064,
+  "max_open_positions": 69,
+  "orders": 1008,
+  "round_trips": 504
+}

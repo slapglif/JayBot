@@ -1,0 +1,59 @@
+{
+  "method": "Synthetic Black-Scholes call overlay; first two PLTR strategy buys per month; 28 calendar DTE; 20-day realized vol clipped 35%-150%; integer contracts; premium <=0.2% equity; exit +75% or expiry.",
+  "results": [
+    {
+      "strike_offset_dollars": 8,
+      "option_profit": 780.2122262778736,
+      "wins": 6,
+      "losses": 1,
+      "skipped_budget": 8,
+      "executed_trades": 7,
+      "win_rate_pct": 85.71428571428571
+    },
+    {
+      "strike_offset_dollars": 5,
+      "option_profit": 691.7696022970636,
+      "wins": 5,
+      "losses": 0,
+      "skipped_budget": 10,
+      "executed_trades": 5,
+      "win_rate_pct": 100.0
+    },
+    {
+      "strike_offset_dollars": 4,
+      "option_profit": 658.534642248169,
+      "wins": 5,
+      "losses": 0,
+      "skipped_budget": 10,
+      "executed_trades": 5,
+      "win_rate_pct": 100.0
+    },
+    {
+      "strike_offset_dollars": 3,
+      "option_profit": 638.3810212236081,
+      "wins": 5,
+      "losses": 0,
+      "skipped_budget": 10,
+      "executed_trades": 5,
+      "win_rate_pct": 100.0
+    },
+    {
+      "strike_offset_dollars": 6,
+      "option_profit": 602.7105221922116,
+      "wins": 5,
+      "losses": 0,
+      "skipped_budget": 10,
+      "executed_trades": 5,
+      "win_rate_pct": 100.0
+    },
+    {
+      "strike_offset_dollars": 7,
+      "option_profit": 429.6353850378638,
+      "wins": 4,
+      "losses": 1,
+      "skipped_budget": 10,
+      "executed_trades": 5,
+      "win_rate_pct": 80.0
+    }
+  ]
+}

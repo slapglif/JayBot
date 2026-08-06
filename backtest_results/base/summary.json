@@ -1,0 +1,128 @@
+{
+  "stats": {
+    "start": "2025-08-05",
+    "end": "2026-08-05",
+    "sessions": 250,
+    "initial_equity": 100000.0,
+    "final_equity": 94238.88833722587,
+    "total_return_pct": -5.761111662774132,
+    "cagr_pct": -5.805836067680426,
+    "max_drawdown_pct": -8.508681610825718,
+    "decision_sharpe": -1.2090759889746177,
+    "orders": 237,
+    "buys": 159,
+    "closed_positions": 78,
+    "realized_win_rate_pct": 100.0,
+    "open_positions": 8,
+    "data_mode": "yahoo-1h-proxy",
+    "slippage_bps": 5.0,
+    "commission_per_order": 0.0,
+    "watchlist": [
+      "AAPL",
+      "AMD",
+      "AMZN",
+      "AVGO",
+      "BRK-B",
+      "COST",
+      "GOOGL",
+      "JPM",
+      "MA",
+      "META",
+      "MSFT",
+      "NFLX",
+      "NVDA",
+      "QQQ",
+      "SOXL",
+      "SOXS",
+      "SPXU",
+      "SPY",
+      "SQQQ",
+      "TECL",
+      "TECS",
+      "TQQQ",
+      "TSLA",
+      "UNH",
+      "UPRO",
+      "V",
+      "XOM"
+    ]
+  },
+  "config": {
+    "initial_capital": 100000.0,
+    "entry_pct": 0.0125,
+    "max_entries": 4,
+    "max_alloc_pct": 0.05,
+    "max_positions": 10,
+    "wait_sessions": 2,
+    "pause_sessions": 5,
+    "target_pct": 0.05,
+    "commission_per_order": 0.0,
+    "slippage_bps": 5.0
+  },
+  "open_positions": {
+    "MA": {
+      "symbol": "MA",
+      "qty": 8.695903720181327,
+      "cost": 5035.311065508857,
+      "entries": 4,
+      "last_entry_session": 37,
+      "opened": "2025-09-02 13:30:00-04:00"
+    },
+    "NFLX": {
+      "symbol": "NFLX",
+      "qty": 43.08093387495698,
+      "cost": 5037.58639955935,
+      "entries": 4,
+      "last_entry_session": 57,
+      "opened": "2025-09-11 13:30:00-04:00"
+    },
+    "SOXS": {
+      "symbol": "SOXS",
+      "qty": 10.189052647516196,
+      "cost": 5073.342843269887,
+      "entries": 4,
+      "last_entry_session": 122,
+      "opened": "2025-12-19 13:30:00-05:00"
+    },
+    "TSLA": {
+      "symbol": "TSLA",
+      "qty": 11.679301361564594,
+      "cost": 5073.282414757168,
+      "entries": 4,
+      "last_entry_session": 130,
+      "opened": "2025-12-26 13:30:00-05:00"
+    },
+    "SPXU": {
+      "symbol": "SPXU",
+      "qty": 107.54249080657466,
+      "cost": 5057.501240849118,
+      "entries": 4,
+      "last_entry_session": 183,
+      "opened": "2026-04-06 13:30:00-04:00"
+    },
+    "TECS": {
+      "symbol": "TECS",
+      "qty": 43.86116633476725,
+      "cost": 4995.105902349913,
+      "entries": 4,
+      "last_entry_session": 192,
+      "opened": "2026-04-13 13:30:00-04:00"
+    },
+    "SQQQ": {
+      "symbol": "SQQQ",
+      "qty": 96.40274510854897,
+      "cost": 4999.501042156047,
+      "entries": 4,
+      "last_entry_session": 192,
+      "opened": "2026-04-14 13:30:00-04:00"
+    },
+    "SOXL": {
+      "symbol": "SOXL",
+      "qty": 21.247381879325104,
+      "cost": 3593.552828052816,
+      "entries": 3,
+      "last_entry_session": 237,
+      "opened": "2026-07-01 13:30:00-04:00"
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "start": "2024-08-07",
+    "end": "2026-08-05",
+    "sessions": 495,
+    "initial_equity": 100000.0,
+    "final_equity": 113454.30671309115,
+    "total_return_pct": 13.454306713091157,
+    "cagr_pct": 6.63723255387938,
+    "max_drawdown_pct": -7.606129406602347,
+    "decision_sharpe": 1.0703882158994702,
+    "orders": 398,
+    "buys": 273,
+    "closed_positions": 125,
+    "realized_win_rate_pct": 100.0,
+    "open_positions": 9,
+    "data_mode": "yahoo-1h-proxy",
+    "slippage_bps": 5.0,
+    "commission_per_order": 0.0,
+    "watchlist": [
+      "AAPL",
+      "AMD",
+      "AMZN",
+      "AVGO",
+      "BRK-B",
+      "COST",
+      "GOOGL",
+      "JPM",
+      "MA",
+      "META",
+      "MSFT",
+      "NFLX",
+      "NVDA",
+      "QQQ",
+      "SOXL",
+      "SPY",
+      "TECL",
+      "TQQQ",
+      "TSLA",
+      "UNH",
+      "UPRO",
+      "V",
+      "XOM"
+    ]
+  },
+  "config": {
+    "initial_capital": 100000.0,
+    "entry_pct": 0.0125,
+    "max_entries": 4,
+    "max_alloc_pct": 0.05,
+    "max_positions": 10,
+    "wait_sessions": 2,
+    "pause_sessions": 5,
+    "target_pct": 0.05,
+    "commission_per_order": 0.0,
+    "slippage_bps": 5.0
+  },
+  "open_positions": {
+    "BRK-B": {
+      "symbol": "BRK-B",
+      "qty": 10.632095972342437,
+      "cost": 5285.1644983224905,
+      "entries": 4,
+      "last_entry_session": 221,
+      "opened": "2025-05-14 13:30:00-04:00"
+    },
+    "NFLX": {
+      "symbol": "NFLX",
+      "qty": 43.922436084630206,
+      "cost": 5335.303678143597,
+      "entries": 4,
+      "last_entry_session": 244,
+      "opened": "2025-07-02 13:30:00-04:00"
+    },
+    "MA": {
+      "symbol": "MA",
+      "qty": 9.576490866746823,
+      "cost": 5504.514343118323,
+      "entries": 4,
+      "last_entry_session": 291,
+      "opened": "2025-09-12 13:30:00-04:00"
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "qty": 11.158453640481241,
+      "cost": 5481.370283260547,
+      "entries": 4,
+      "last_entry_session": 351,
+      "opened": "2025-10-31 13:30:00-04:00"
+    },
+    "TSLA": {
+      "symbol": "TSLA",
+      "qty": 15.86865171545276,
+      "cost": 5535.791728733938,
+      "entries": 4,
+      "last_entry_session": 489,
+      "opened": "2026-05-15 13:30:00-04:00"
+    },
+    "META": {
+      "symbol": "META",
+      "qty": 4.448661769157096,
+      "cost": 2759.020001984437,
+      "entries": 2,
+      "last_entry_session": 487,
+      "opened": "2026-07-17 13:30:00-04:00"
+    },
+    "COST": {
+      "symbol": "COST",
+      "qty": 2.9955303846728194,
+      "cost": 2835.037249703757,
+      "entries": 2,
+      "last_entry_session": 494,
+      "opened": "2026-08-03 13:30:00-04:00"
+    },
+    "UNH": {
+      "symbol": "UNH",
+      "qty": 3.458821461897266,
+      "cost": 1420.1755233095562,
+      "entries": 1,
+      "last_entry_session": 493,
+      "opened": "2026-08-04 13:30:00-04:00"
+    },
+    "XOM": {
+      "symbol": "XOM",
+      "qty": 9.312405759681976,
+      "cost": 1418.1965525112469,
+      "entries": 1,
+      "last_entry_session": 494,
+      "opened": "2026-08-05 13:30:00-04:00"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "start": "2024-08-07",
+  "end": "2026-08-05",
+  "final": 124672.62602994511,
+  "return_pct": 24.67262602994511,
+  "cagr_pct": 11.75543106887229,
+  "max_dd_pct": -19.704715938535845,
+  "orders": 465,
+  "buys": 364,
+  "exits": 101,
+  "tp_exits": 19,
+  "profit_lock_exits": 82,
+  "post_exit_buys": 36,
+  "post_exit_no_qualifier": 36,
+  "open": 10,
+  "arms": 100
+}

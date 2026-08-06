@@ -1,0 +1,5 @@
+{
+  "best_risk_pct": 0.5,
+  "best_tp_pct": 95,
+  "method": "Weekly first TSMX trading day; $5 OTM; 28 DTE; integer contracts; synthetic Black-Scholes; overlapping positions allowed."
+}

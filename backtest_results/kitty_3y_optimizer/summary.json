@@ -1,0 +1,26 @@
+{
+  "best": {
+    "wait": 1,
+    "tp": 30,
+    "final": 122385.18052093788,
+    "return_pct": 22.385180520937876,
+    "cagr_pct": 6.9653075641754825,
+    "max_dd_pct": -10.193416227345608,
+    "orders": 160,
+    "exits": 25,
+    "open": 10
+  },
+  "inception_switches": {
+    "NVDU": "2023-09-13",
+    "AAPU": "2023-08-07",
+    "MSTU": "2024-09-18",
+    "METU": "2024-06-06",
+    "AMZU": "2023-08-07",
+    "NFXL": "2024-10-03",
+    "PLTR": null,
+    "GGLL": "2023-08-07",
+    "TSMX": "2024-10-03",
+    "IBX": "2026-03-24"
+  },
+  "method": "Daily real-data proxy; underlying before ETF inception, ETF returns after inception; continuous return index."
+}

@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+data_cache/
+.env
+.venv/
+venv/
+*.tmp
+.DS_Store

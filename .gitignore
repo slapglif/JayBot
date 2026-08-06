@@ -1,6 +1,7 @@
 __pycache__/
 *.py[cod]
 data_cache/
+prospective_shadow/
 .env
 .venv/
 venv/

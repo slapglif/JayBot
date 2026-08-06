@@ -1,0 +1,72 @@
+{
+  "method": "expanding training window; exact 84-day purge; 9 candidate cells; each test fold evaluated once",
+  "fold_count": 6,
+  "candidate_count": 9,
+  "selected_profitable_fold_rate": 0.5,
+  "selected_test_profit_sum": 105044.66294769954,
+  "median_profit_on_premium_pct": 2.553742083149073,
+  "largest_fold_profit_share_pct": 128.3941618828963,
+  "passes_75pct_profitable_folds": false,
+  "passes_no_fold_over_50pct_profit": false,
+  "selected": [
+    {
+      "fold": "2014_2015",
+      "strike_otm_pct": 7.5,
+      "dte_days": 84,
+      "tp_pct": 700.0,
+      "train_profit": 276663.92222579045,
+      "test_profit": -67348.67761374108,
+      "test_profit_on_premium_pct": -30.976342604070204
+    },
+    {
+      "fold": "2016_2017",
+      "strike_otm_pct": 7.5,
+      "dte_days": 84,
+      "tp_pct": 700.0,
+      "train_profit": 268890.2222782597,
+      "test_profit": 69705.12110179839,
+      "test_profit_on_premium_pct": 27.361401573104565
+    },
+    {
+      "fold": "2018_2019",
+      "strike_otm_pct": 7.5,
+      "dte_days": 84,
+      "tp_pct": 700.0,
+      "train_profit": 223538.8680634532,
+      "test_profit": -63707.84382618767,
+      "test_profit_on_premium_pct": -30.083472639076565
+    },
+    {
+      "fold": "2020_2021",
+      "strike_otm_pct": 7.5,
+      "dte_days": 84,
+      "tp_pct": 500.0,
+      "train_profit": 331581.1390504072,
+      "test_profit": 134871.21459441213,
+      "test_profit_on_premium_pct": 54.48374130409002
+    },
+    {
+      "fold": "2022_2023",
+      "strike_otm_pct": 7.5,
+      "dte_days": 84,
+      "tp_pct": 500.0,
+      "train_profit": 569455.2104201012,
+      "test_profit": -39661.01051716109,
+      "test_profit_on_premium_pct": -21.729731690938248
+    },
+    {
+      "fold": "2024_2026",
+      "strike_otm_pct": 7.5,
+      "dte_days": 84,
+      "tp_pct": 500.0,
+      "train_profit": 538949.5163148749,
+      "test_profit": 71185.85920857887,
+      "test_profit_on_premium_pct": 26.837215857236394
+    }
+  ],
+  "limitations": [
+    "Synthetic option pricing only",
+    "Inspected retrospective history",
+    "9-cell slice, not full human search family"
+  ]
+}

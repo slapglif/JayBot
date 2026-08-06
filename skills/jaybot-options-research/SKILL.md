@@ -29,10 +29,10 @@ Read these before changing parameters:
 1. `docs/RESEARCH_JOURNEY.md` — ordered experiment history and rejected rules.
 2. `config/winning_parameters.json` — machine-readable exact parameters and result.
 3. `docs/SCRIPT_INDEX.md` — script-to-artifact map.
-4. `docs/FALSIFICATION_AUDIT.md` — current 33/100 readiness score, executed unseen tests, failed IV/adverse stresses, and remediation gates.
+4. `docs/FALSIFICATION_RESOLUTION_AUDIT.md` — current 22/100 evidence score, executed remediation, hard failures, and irreducible validation gates.
 5. `backtest_results/leveraged_etf_options_3y/raw_winner_drawdown_summary.json` — verified drawdown reconstruction.
 
-The current synthetic effect transfers across unseen underlying samples, but +25% entry-IV markup makes it negative and no historical option-chain fills have been validated.
+The current gap-resolution audit is `docs/FALSIFICATION_RESOLUTION_AUDIT.md`; readiness is **22/100**, not 33/100. New evidence: PBO≈0.667, corrected max-stat p=1.0, exact purged walk-forward 3/6 positive, and the first delayed-chain snapshot mapped only 3/10 frozen signals under the $500/DTE rules with very wide spreads. Do not attempt to raise the score by changing criteria. Historical licensed NBBO, a new prospective holdout, and broker shadow evidence are irreducible gates; changing core rules creates a new strategy generation.
 
 Completion criterion: the proposed run can name its parent configuration and every changed field.
 

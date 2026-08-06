@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "ledger": "backtest_results\\falsification_audit\\frozen_test_ledgers.csv",
+  "census": "data\\etf_universe_census.csv",
+  "scenarios": [
+    {
+      "scenario": "current_mature",
+      "trades": 458,
+      "symbols": 10,
+      "families": 10,
+      "total_pnl": 150810.8779516078,
+      "positive_families": 9,
+      "positive_family_pct": 90.0,
+      "largest_abs_family": "alphabet",
+      "largest_abs_family_pnl": 44877.588737702856,
+      "largest_abs_family_share_of_abs_pnl_pct": 26.035509905076218,
+      "largest_positive_family": "alphabet",
+      "largest_positive_family_share_of_total_profit_pct": 29.757527671248738,
+      "largest_issuer": "Direxion",
+      "largest_issuer_pnl": 137267.30304169378,
+      "largest_issuer_share_of_abs_pnl_pct": 91.01949733741367,
+      "passes_70pct_positive_families": true,
+      "passes_25pct_max_family_profit_contribution": false
+    },
+    {
+      "scenario": "unseen_predevelopment",
+      "trades": 3691,
+      "symbols": 10,
+      "families": 10,
+      "total_pnl": 420374.84319269133,
+      "positive_families": 6,
+      "positive_family_pct": 60.0,
+      "largest_abs_family": "semiconductors",
+      "largest_abs_family_pnl": 132129.95053260558,
+      "largest_abs_family_share_of_abs_pnl_pct": 22.052239797671707,
+      "largest_positive_family": "semiconductors",
+      "largest_positive_family_share_of_total_profit_pct": 31.431459962993046,
+      "largest_issuer": "ProShares",
+      "largest_issuer_pnl": 420374.843192692,
+      "largest_issuer_share_of_abs_pnl_pct": 100.0,
+      "passes_70pct_positive_families": false,
+      "passes_25pct_max_family_profit_contribution": false
+    },
+    {
+      "scenario": "unseen_recent",
+      "trades": 740,
+      "symbols": 10,
+      "families": 10,
+      "total_pnl": 148170.9788131618,
+      "positive_families": 8,
+      "positive_family_pct": 80.0,
+      "largest_abs_family": "semiconductors",
+      "largest_abs_family_pnl": 58846.01479360852,
+      "largest_abs_family_share_of_abs_pnl_pct": 33.62411964985219,
+      "largest_positive_family": "semiconductors",
+      "largest_positive_family_share_of_total_profit_pct": 39.71493963592641,
+      "largest_issuer": "ProShares",
+      "largest_issuer_pnl": 148170.97881316175,
+      "largest_issuer_share_of_abs_pnl_pct": 100.0,
+      "passes_70pct_positive_families": true,
+      "passes_25pct_max_family_profit_contribution": false
+    }
+  ],
+  "method": "Frozen-ledger additive leave-one-economic-family-out; no parameter reselection.",
+  "limitations": [
+    "Synthetic option P&L only; no historical option-chain fills.",
+    "Only census-mapped observed research symbols are audited.",
+    "Issuer concentration is not an independent-family test."
+  ]
+}

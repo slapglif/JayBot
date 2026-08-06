@@ -37,10 +37,29 @@
 ## Falsification audit
 
 - `falsification_audit.py` — frozen-parameter unseen-era/universe tests, weekday perturbations, execution/IV stresses, annual diagnostics, and nearby-parameter surface.
+- `rigorous_stat_audit.py` — multiple-testing/PBO approximation, block-bootstrap max-stat correction, parameter instability, and 84-day-embargo walk-forward audit using existing artifacts.
 - `docs/FALSIFICATION_AUDIT.md` — executed evidence, 33/100 market-readiness score, every deduction, and remediation gates.
+- `docs/RIGOROUS_STAT_AUDIT.md` — stricter multiple-testing and walk-forward audit summary with limitations.
 - `docs/GENERALIZATION_AUDIT.md` — independent statistical audit, leave-one-regime-out failures, and prospective protocol.
 - `backtest_results/falsification_audit/` — complete machine-readable tests, manifests, ledgers, score, bootstrap diagnostics, benchmarks, and shared-cash diagnostics.
+- `backtest_results/rigorous_stat_audit/` — machine-readable CSCV/PBO, max-stat bootstrap, instability, and walk-forward outputs, including exact six-fold purged worker results.
+- `walk_forward_worker.py` — parallel exact expanding-window worker for the six 84-day-purged folds.
+- `option_chain_adapter.py` / `test_option_chain_adapter.py` — provider-neutral quote schema plus tested current Nasdaq/Cboe prototypes and fail-closed licensed-provider skeletons.
+- `collect_prospective_option_chain.py` / `verify_prospective_evidence.py` — one-shot hash-linked prospective snapshots and integrity verification; recurring public-Cboe automation is not authorized/enabled.
+- `docs/FALSIFICATION_100_GATES.md` and `docs/FALSIFICATION_RESOLUTION_AUDIT.md` — immutable 100-point gates, executed remediation, hard failures, and current 22/100 evidence score.
+- `build_etf_universe_census.py` — validates the sourced observed long-2× registry and emits dated eligibility snapshots without claiming unavailable historical constituents.
+- `audit_etf_universe_families.py` — economic-family/issuer concentration and frozen-ledger leave-one-family-out tests.
+- `docs/ETF_UNIVERSE_FAMILY_AUDIT.md` — census scope, durable sources, gates, results, and limitations.
+- `data/etf_universe_census.csv` — 20-product sourced observed-research census and family map.
+- `backtest_results/universe_census/` and `backtest_results/universe_family_audit/` — dated census, concentration, and LOFO artifacts.
 - `screenshots/30_falsification_audit.png` — white-font audit dashboard.
+
+## Integrated portfolio risk engine
+
+- `portfolio_risk_engine.py` — reusable shared-cash admission, marking, caps, and drawdown-kill engine.
+- `run_portfolio_risk_audit.py` — executable +500/+800 current/unseen risk audit.
+- `docs/PORTFOLIO_RISK_ENGINE.md` — controls, executed results, and synthetic-data boundaries.
+- `backtest_results/portfolio_risk_engine/` — candidate/accepted/rejected ledgers, equity curves, diagnostics, summary, and manifest.
 
 ## Key artifacts
 

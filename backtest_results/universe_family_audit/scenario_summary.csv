@@ -1,0 +1,4 @@
+scenario,trades,symbols,families,total_pnl,positive_families,positive_family_pct,largest_abs_family,largest_abs_family_pnl,largest_abs_family_share_of_abs_pnl_pct,largest_positive_family,largest_positive_family_share_of_total_profit_pct,largest_issuer,largest_issuer_pnl,largest_issuer_share_of_abs_pnl_pct,passes_70pct_positive_families,passes_25pct_max_family_profit_contribution
+current_mature,458,10,10,150810.8779516078,9,90.0,alphabet,44877.588737702856,26.035509905076218,alphabet,29.757527671248738,Direxion,137267.30304169378,91.01949733741367,True,False
+unseen_predevelopment,3691,10,10,420374.84319269133,6,60.0,semiconductors,132129.95053260558,22.052239797671707,semiconductors,31.431459962993046,ProShares,420374.843192692,100.0,False,False
+unseen_recent,740,10,10,148170.9788131618,8,80.0,semiconductors,58846.01479360852,33.62411964985219,semiconductors,39.71493963592641,ProShares,148170.97881316175,100.0,True,False

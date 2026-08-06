@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "objective_rule": "US-listed exchange-traded fund targeting +2x DAILY return of a US equity index, sector, or single stock",
+  "input": "data\\etf_universe_census.csv",
+  "input_sha256": "cb6b3467a31dd011941b94ebfcfc49e021962a8c8ee13d38c3badcb8fc40f1cc",
+  "row_count": 20,
+  "snapshots": {
+    "2023-08-06": 14,
+    "2026-08-06": 20
+  },
+  "coverage_class": "observed_research_census",
+  "historical_completeness_claimed": false,
+  "known_limitations": [
+    "Seed contains the 20 products actually used by JayBot frozen current/unseen tests; it is not every product ever launched.",
+    "No exhaustive closed/delisted product registry was available from the durable sponsor/SEC sources used here.",
+    "first_observed_price_date is an availability bound, not an asserted legal inception date unless inception_date_basis=sponsor.",
+    "Current sponsor or SEC evidence cannot prove a fund was listed on an earlier date."
+  ]
+}

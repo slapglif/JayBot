@@ -78,7 +78,7 @@ def simulate_symbol(sym,d,start,end,sc,mature_only=True):
    if ci<len(idx):
     cv=call(close[ci],k,max((expiry-idx[ci]).days,0)/365,hold_iv)*(1-sc.exit_spread_pct)
     checks.append({'date':idx[ci],'trigger':cv<=entry_price*.5,'done':False})
-  ledger.append({'symbol':sym,'entry_date':ed,'exit_date':idx[xi],'entry_price':entry_price,'contracts':n,'pnl':pnl,'reason':reason,'scenario':sc.name})
+  ledger.append({'symbol':sym,'entry_date':ed,'exit_date':idx[xi],'entry_price':entry_price,'exit_price':ev,'contracts':n,'strike':k,'expiry_date':expiry,'entry_iv':entry_iv,'hold_iv':hold_iv,'pnl':pnl,'reason':reason,'scenario':sc.name})
  return ledger,{'symbol':sym,'profit':profit,'premium':premium,'trades':len(ledger),'wins':wins,'paused':paused,'triggers':triggers,'start':str(max(pd.Timestamp(start),idx.min()).date()),'end':str(min(pd.Timestamp(end),idx.max()).date())}
 
 def run_universe(data,syms,start,end,sc,mature_only=True):

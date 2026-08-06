@@ -1,0 +1,30 @@
+{
+  "score_name": "JayBot falsification readiness after gap-resolution audit",
+  "score": 22,
+  "maximum": 100,
+  "previous_score": 33,
+  "meaning_of_100": "Ready to deploy today with real capital under frozen rules and predeclared risk limits",
+  "verdict": "The strategy failed newly implemented hard gates; a score of 100 cannot be awarded honestly or reached without licensed historical option data and prospective elapsed evidence.",
+  "categories": [
+    {"category":"Unseen/OOS validation","maximum":15,"awarded":9,"reason":"Retrospective transfer survives, but no pristine prospective matured holdout exists."},
+    {"category":"Parameter multiplicity control","maximum":12,"awarded":0,"reason":"PBO approximation 0.667 and block-bootstrap max-stat corrected p-value 1.0; strict gate failed."},
+    {"category":"Universe selection robustness","maximum":10,"awarded":3,"reason":"Observed census/family mappings exist, but it is not historically exhaustive; long sample has only 60% positive families and concentration gates fail."},
+    {"category":"Historical option-chain validation","maximum":15,"awarded":0,"reason":"No licensed historical OPRA/NBBO replay."},
+    {"category":"Execution realism","maximum":10,"awarded":0,"reason":"Initial delayed-chain snapshot mapped only 3/10 frozen signals under the $500 and DTE rules; mapped spreads were roughly 34%-57% with near-zero volume."},
+    {"category":"Costs and slippage","maximum":8,"awarded":1,"reason":"Generic stress exists, but observed spreads are materially larger and combined adverse testing is negative."},
+    {"category":"Walk-forward validation","maximum":8,"awarded":0,"reason":"Exact six-fold purged audit produced 3/6 positive folds; largest positive fold exceeds total net because losing folds offset it."},
+    {"category":"Robustness/stress","maximum":10,"awarded":5,"reason":"Entry-day and parameter neighborhoods transfer, but combined adverse and several IV stresses fail."},
+    {"category":"Concentration/portfolio risk","maximum":6,"awarded":4,"reason":"Integrated caps retain positive synthetic P&L with <=20 positions and <=10% premium, but family/issuer concentration remains."},
+    {"category":"Operational/live readiness","maximum":6,"awarded":0,"reason":"No broker shadow, actual fills, six-month record, or 100 reconciled prospective orders."}
+  ],
+  "hard_gate_results": {
+    "real_historical_option_chain": "FAIL/UNAVAILABLE",
+    "current_contract_mapping": "FAIL: 3/10",
+    "multiple_testing": "FAIL: PBO 0.667; corrected p 1.0",
+    "exact_purged_walk_forward": "FAIL: 3/6 positive",
+    "family_breadth_and_concentration": "FAIL in long sample",
+    "portfolio_caps": "PASS in synthetic current and unseen recent samples",
+    "prospective_two_year_holdout": "NOT MATURED",
+    "live_shadow_100_orders": "NOT STARTED"
+  }
+}

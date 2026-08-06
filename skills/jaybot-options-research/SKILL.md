@@ -46,7 +46,11 @@ Completion criterion: the proposed run can name its parent configuration and eve
 - +500% TP, meaning 6× option value.
 - If still open at day 21 and modeled value is down at least 50%, pause new entries on that ETF for six weeks.
 - Integer contracts; skip when the cap cannot buy one.
-- Black–Scholes, entry-date rolling 20-session realized volatility clipped to 25%–175%, 3% risk-free rate.
+- Black–Scholes over real adjusted ETF OHLC; entry-date rolling 20-session realized volatility clipped to 25%–175%; 3% risk-free rate.
+
+## TP sweep candidate
+
+The +500% to +1000% TP sweep is documented in `docs/TP_500_1000_ANALYSIS.md`. The robustness-aware next research candidate is **+800% TP** (9× option value). Raw winners differ by sample: +950% on current requested ETFs, +1000% on recent unseen ETFs, and +600% pre-development. Do not overwrite or relabel the frozen +500% result; +800% is a new strategy generation requiring historical option-chain replay and a fresh prospective holdout. No tested TP passed the combined-adverse stress.
 
 ## Required workflow
 

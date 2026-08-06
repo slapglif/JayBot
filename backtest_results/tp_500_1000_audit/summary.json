@@ -1,0 +1,43 @@
+{
+  "tested_tp_pct": [
+    500,
+    550,
+    600,
+    650,
+    700,
+    750,
+    800,
+    850,
+    900,
+    950,
+    1000
+  ],
+  "raw_current_profit_winner_tp_pct": 950,
+  "raw_unseen_recent_winner_tp_pct": 1000,
+  "raw_predevelopment_winner_tp_pct": 600,
+  "unconstrained_robust_winner_tp_pct": 550,
+  "recommended_system_tp_pct": 800,
+  "recommendation_reason": "Best robustness score among TPs positive in all three base samples and under +25% entry-IV markup; also least-negative combined-adverse result.",
+  "combined_adverse_passes": 0,
+  "recommendation": {
+    "tp_pct": 800,
+    "current_profit": 187514.86941393968,
+    "unseen_recent_profit": 163572.95544251113,
+    "unseen_predevelopment_profit": 429001.446487364,
+    "current_pop_pct": 99.7304920639477,
+    "unseen_recent_pop_pct": 51.34984761922684,
+    "unseen_predevelopment_pop_pct": 24.779208961216494,
+    "median_pop_pct": 51.34984761922684,
+    "worst_pop_pct": 24.779208961216494,
+    "dispersion_pop_pct": 74.9512831027312,
+    "iv25_profit": 8482.300338474877,
+    "iv25_pop_pct": 2.8084637621980386,
+    "combined_adverse_profit": -6283.404501567729,
+    "combined_adverse_pop_pct": -2.684202079268794,
+    "positive_base_samples": 3,
+    "robust_score": 52.496759634425416,
+    "iv25_pass": true,
+    "recommended_eligible": true
+  },
+  "warning": "This expands the searched family by 11 TP values. Recommendation is synthetic-model research, not historical option-chain proof."
+}

@@ -31,6 +31,7 @@ class Rule:
     commission:float=0.0
     max_hold:int|None=None
     stop_pct:float|None=None
+    negative_after_sessions:int|None=None
 
 @dataclass
 class Position:
@@ -105,6 +106,7 @@ def simulate(data:dict[str,pd.DataFrame],rule=Rule(),start=None,end=None,exclude
             o,h,l,c=day[s];avg=p.cost/p.qty;fill=reason=None
             if h>=avg*(1+rule.tp):fill=avg*(1+rule.tp)*(1-rule.slippage_bps/10000);reason="TP"
             elif rule.stop_pct is not None and l<=avg*(1+rule.stop_pct):fill=avg*(1+rule.stop_pct)*(1-rule.slippage_bps/10000);reason="STOP"
+            elif rule.negative_after_sessions is not None and i-p.opened_i>=rule.negative_after_sessions and c<avg:fill=c*(1-rule.slippage_bps/10000);reason="NEGATIVE_AFTER_N"
             elif rule.max_hold is not None and i-p.opened_i>=rule.max_hold:fill=c*(1-rule.slippage_bps/10000);reason="TIME"
             if fill is not None:
                 proceeds=p.qty*fill-rule.commission;cash+=proceeds;orders.append({"date":dt,"symbol":s,"side":"EXIT","price":fill,"qty":p.qty,"pnl":proceeds-p.cost,"reason":reason,"tranches":p.tranches});del pos[s]

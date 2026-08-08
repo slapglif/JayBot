@@ -1,0 +1,51 @@
+{
+  "rule": "Beginning with the third trading session after initial position entry, exit the whole position at close when close is below weighted-average cost.",
+  "start": "2023-08-07",
+  "end": "2026-08-06",
+  "results": {
+    "actual": {
+      "start": "2023-08-07",
+      "end": "2026-08-06",
+      "return_pct": 52.56932285988118,
+      "cagr_pct": 15.132418344818355,
+      "max_dd_pct": -23.217357158485108,
+      "sharpe": 0.8916579087338278,
+      "orders": 1559,
+      "buys": 1061,
+      "exits": 498,
+      "open_positions": 7,
+      "realized_pnl": 48673.715940933216,
+      "open_pnl": 3895.6069189477585,
+      "min_cash": 35397.81657175764,
+      "max_positions": 9,
+      "spy_pct": 70.52206787725395,
+      "qqq_pct": 90.47683034295935,
+      "winning_exits": 45,
+      "losing_exits": 453,
+      "stop_exits": 453,
+      "stop_pnl": -138579.3505178896
+    },
+    "hybrid": {
+      "start": "2023-08-07",
+      "end": "2026-08-06",
+      "return_pct": 74.61933355850321,
+      "cagr_pct": 20.43499927284296,
+      "max_dd_pct": -25.10157498871113,
+      "sharpe": 0.7718067288385158,
+      "orders": 2105,
+      "buys": 1395,
+      "exits": 710,
+      "open_positions": 7,
+      "realized_pnl": 70160.71586421349,
+      "open_pnl": 4458.617694289746,
+      "min_cash": 9570.84773619799,
+      "max_positions": 10,
+      "spy_pct": 70.52206787725395,
+      "qqq_pct": 90.47683034295935,
+      "winning_exits": 58,
+      "losing_exits": 652,
+      "stop_exits": 652,
+      "stop_pnl": -199040.24352064502
+    }
+  }
+}

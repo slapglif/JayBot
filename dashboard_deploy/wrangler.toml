@@ -1,0 +1,6 @@
+name = "jaybot-command-center"
+compatibility_date = "2026-05-07"
+pages_build_output_dir = "."
+
+# Rollback artifact: late-Sunday stable dashboard_deploy.
+# Secrets stay in Cloudflare Pages project settings; no values belong here.
